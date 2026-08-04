@@ -87,15 +87,6 @@
             background-color: #3730a3;
         }
 
-        /* Botão secundário para sugerir ideia */
-        .btn-suggest {
-            background-color: #f59e0b;
-        }
-
-        .btn-suggest:hover {
-            background-color: #d97706;
-        }
-
         form {
             display: flex;
             flex-direction: column;
@@ -116,11 +107,6 @@
             font-size: 1rem;
         }
 
-        .actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-
         #message-list {
             list-style: none;
             display: flex;
@@ -133,6 +119,7 @@
             padding: 0.75rem;
             border-radius: 6px;
             border-left: 3px solid #10b981;
+            word-break: break-word;
         }
 
         footer {
@@ -146,9 +133,6 @@
         /* Ajustes para telas menores */
         @media (max-width: 600px) {
             .input-group {
-                flex-direction: column;
-            }
-            .actions {
                 flex-direction: column;
             }
         }
@@ -184,7 +168,49 @@
         </section>
 
         <section class="card interact-box">
-            <h2>Reflexão do Dia</h2>
-            <blockquote id="quote-display">Clique no botão abaixo para gerar uma mensagem de reflexão.</blockquote>
-            <button id="btn-quote">Gerar Mensagem</button>
+            <h2>Mural de Ideias e Mensagens</h2>
+            <p style="margin-bottom: 1rem;">Compartilhe sua ideia ou mensagem de respeito para inspirar outras pessoas:</p>
+            
+            <form id="idea-form">
+                <div class="input-group">
+                    <input type="text" id="user-input" placeholder="Escreva sua ideia aqui..." required>
+                    <button type="submit">Enviar Ideia</button>
+                </div>
+            </form>
+
+            <h3>Mensagens da Comunidade:</h3>
+            <ul id="message-list">
+                <li>Respeitar as diferenças é o primeiro passo para um mundo melhor!</li>
+            </ul>
         </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Respeito e Igualdade. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('idea-form');
+        const input = document.getElementById('user-input');
+        const messageList = document.getElementById('message-list');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede a página de recarregar
+
+            const text = input.value.trim();
+
+            if (text !== "") {
+                // Cria um novo item na lista
+                const newLi = document.createElement('li');
+                newLi.textContent = text;
+                
+                // Adiciona o novo item no topo da lista
+                messageList.prepend(newLi);
+
+                // Limpa o campo de texto
+                input.value = "";
+            }
+        });
+    </script>
+</body>
+</html>
