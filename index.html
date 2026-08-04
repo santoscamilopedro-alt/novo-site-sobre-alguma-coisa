@@ -52,6 +52,17 @@
             margin-bottom: 0.8rem;
         }
 
+        .card h3 {
+            color: #3730a3;
+            margin-top: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .card ul {
+            margin-left: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
         blockquote {
             font-style: italic;
             background-color: #eef2ff;
@@ -152,6 +163,22 @@
 
     <main class="container">
         <section class="card">
+            <h2>O Que Significa Igualdade</h2>
+            <ul>
+                <li><strong>Direitos iguais:</strong> Todos devem ter as mesmas leis e proteções.</li>
+                <li><strong>Oportunidades:</strong> O acesso a uma vida boa e justa não deve depender de quem você é.</li>
+                <li><strong>Equidade:</strong> Às vezes é preciso tratar as pessoas de formas diferentes para que todas fiquem em pé de igualdade real.</li>
+            </ul>
+
+            <h3>O Que Significa Respeito</h3>
+            <ul>
+                <li><strong>Ouvir o outro:</strong> Prestar atenção no que o outro diz e sente.</li>
+                <li><strong>Valorizar o diferente:</strong> Aceitar que nem todo mundo pensa ou vive igual a você.</li>
+                <li><strong>Zero violência:</strong> Recusar qualquer ato de preconceito ou agressão.</li>
+            </ul>
+        </section>
+
+        <section class="card">
             <h2>Por que combater o preconceito?</h2>
             <p>O preconceito e a discriminação ferem a dignidade humana e limitam oportunidades. Promover a empatia, o diálogo e a inclusão é um dever de todos para construir uma sociedade mais justa.</p>
         </section>
@@ -161,88 +188,3 @@
             <blockquote id="quote-display">Clique no botão abaixo para gerar uma mensagem de reflexão.</blockquote>
             <button id="btn-quote">Gerar Mensagem</button>
         </section>
-
-        <section class="card quiz-box">
-            <h2>Mural da Empatia</h2>
-            <p>Deixe um compromisso ou clique para gerar uma ideia:</p>
-            
-            <form id="comment-form">
-                <div class="input-group">
-                    <input type="text" id="user-message" placeholder="Escreva seu compromisso ou clique em Sugerir Ideia..." required>
-                </div>
-                <div class="actions">
-                    <button type="button" id="btn-suggest" class="btn-suggest">💡 Sugerir Ideia</button>
-                    <button type="submit">Enviar Compromisso</button>
-                </div>
-            </form>
-
-            <ul id="message-list"></ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; Projeto de Conscientização - Todos contra o Preconceito.</p>
-    </footer>
-
-    <script>
-        // Array com mensagens de reflexão
-        const frases = [
-            "A diversidade é a nossa maior riqueza e o respeito é a nossa maior virtude.",
-            "Combater o preconceito começa na desconstrução dos nossos próprios hábitos cotidianos.",
-            "A empatia nos permite enxergar o outro não pelas diferenças, mas pela humanidade que compartilhamos.",
-            "Ninguém nasce odiando outra pessoa pela cor da sua pele, por sua origem ou sua religião.",
-            "Educar para a igualdade é o caminho mais seguro para uma sociedade justa."
-        ];
-
-        // Array com sugestões de ideias para o campo de texto
-        const ideiasCompromisso = [
-            "Promovo a escuta ativa e escuto sem julgar.",
-            "Denuncio atitudes preconceituosas ao meu redor.",
-            "Busco aprender sobre culturas e realidades diferentes da minha.",
-            "Não compartilho piadas ou comentários discriminatórios.",
-            "Ensino crianças e jovens o valor da igualdade e do respeito.",
-            "Aapoio iniciativas que promovem a inclusão social.",
-            "Respeito a diversidade religiosa, de gênero e de origem de todas as pessoas."
-        ];
-
-        // Seleção dos elementos do HTML
-        const quoteDisplay = document.getElementById('quote-display');
-        const btnQuote = document.getElementById('btn-quote');
-        const commentForm = document.getElementById('comment-form');
-        const userInput = document.getElementById('user-message');
-        const btnSuggest = document.getElementById('btn-suggest');
-        const messageList = document.getElementById('message-list');
-
-        // Evento para gerar frase aleatória na reflexão
-        btnQuote.addEventListener('click', () => {
-            const randomIndex = Math.floor(Math.random() * frases.length);
-            quoteDisplay.textContent = `"${frases[randomIndex]}"`;
-        });
-
-        // Evento para preencher o campo com uma ideia automática
-        btnSuggest.addEventListener('click', () => {
-            const randomIndex = Math.floor(Math.random() * ideiasCompromisso.length);
-            userInput.value = ideiasCompromisso[randomIndex];
-            userInput.focus(); // Foca no campo de texto para o usuário poder editar se quiser
-        });
-
-        // Evento para adicionar a mensagem ao mural
-        commentForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Impede o recarregamento da página
-
-            const texto = userInput.value.trim();
-
-            if (texto !== '') {
-                const li = document.createElement('li');
-                li.textContent = texto;
-                
-                // Adiciona o compromisso no topo da lista
-                messageList.prepend(li);
-
-                // Limpa o campo de texto
-                userInput.value = '';
-            }
-        });
-    </script>
-</body>
-</html>
