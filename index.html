@@ -65,8 +65,8 @@
             background-color: #4f46e5;
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
+            padding: 0.75rem 1.2rem;
+            font-size: 0.95rem;
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.2s ease-in-out;
@@ -76,10 +76,25 @@
             background-color: #3730a3;
         }
 
+        /* Botão secundário para sugerir ideia */
+        .btn-suggest {
+            background-color: #f59e0b;
+        }
+
+        .btn-suggest:hover {
+            background-color: #d97706;
+        }
+
         form {
             display: flex;
-            gap: 0.5rem;
+            flex-direction: column;
+            gap: 0.75rem;
             margin-bottom: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
         }
 
         input[type="text"] {
@@ -88,6 +103,11 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 1rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 0.5rem;
         }
 
         #message-list {
@@ -110,6 +130,16 @@
             color: #666;
             font-size: 0.9rem;
             margin-top: 2rem;
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 600px) {
+            .input-group {
+                flex-direction: column;
+            }
+            .actions {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -134,11 +164,18 @@
 
         <section class="card quiz-box">
             <h2>Mural da Empatia</h2>
-            <p>Deixe um compromisso contra o preconceito:</p>
+            <p>Deixe um compromisso ou clique para gerar uma ideia:</p>
+            
             <form id="comment-form">
-                <input type="text" id="user-message" placeholder="Ex: Promovo a escuta ativa e o respeito..." required>
-                <button type="submit">Enviar Compromisso</button>
+                <div class="input-group">
+                    <input type="text" id="user-message" placeholder="Escreva seu compromisso ou clique em Sugerir Ideia..." required>
+                </div>
+                <div class="actions">
+                    <button type="button" id="btn-suggest" class="btn-suggest">💡 Sugerir Ideia</button>
+                    <button type="submit">Enviar Compromisso</button>
+                </div>
             </form>
+
             <ul id="message-list"></ul>
         </section>
     </main>
@@ -148,7 +185,7 @@
     </footer>
 
     <script>
-        // Array com mensagens de conscientização
+        // Array com mensagens de reflexão
         const frases = [
             "A diversidade é a nossa maior riqueza e o respeito é a nossa maior virtude.",
             "Combater o preconceito começa na desconstrução dos nossos próprios hábitos cotidianos.",
@@ -157,20 +194,39 @@
             "Educar para a igualdade é o caminho mais seguro para uma sociedade justa."
         ];
 
+        // Array com sugestões de ideias para o campo de texto
+        const ideiasCompromisso = [
+            "Promovo a escuta ativa e escuto sem julgar.",
+            "Denuncio atitudes preconceituosas ao meu redor.",
+            "Busco aprender sobre culturas e realidades diferentes da minha.",
+            "Não compartilho piadas ou comentários discriminatórios.",
+            "Ensino crianças e jovens o valor da igualdade e do respeito.",
+            "Aapoio iniciativas que promovem a inclusão social.",
+            "Respeito a diversidade religiosa, de gênero e de origem de todas as pessoas."
+        ];
+
         // Seleção dos elementos do HTML
         const quoteDisplay = document.getElementById('quote-display');
         const btnQuote = document.getElementById('btn-quote');
         const commentForm = document.getElementById('comment-form');
         const userInput = document.getElementById('user-message');
+        const btnSuggest = document.getElementById('btn-suggest');
         const messageList = document.getElementById('message-list');
 
-        // Evento para gerar frase aleatória
+        // Evento para gerar frase aleatória na reflexão
         btnQuote.addEventListener('click', () => {
             const randomIndex = Math.floor(Math.random() * frases.length);
             quoteDisplay.textContent = `"${frases[randomIndex]}"`;
         });
 
-        // Evento para adicionar mensagem ao mural
+        // Evento para preencher o campo com uma ideia automática
+        btnSuggest.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * ideiasCompromisso.length);
+            userInput.value = ideiasCompromisso[randomIndex];
+            userInput.focus(); // Foca no campo de texto para o usuário poder editar se quiser
+        });
+
+        // Evento para adicionar a mensagem ao mural
         commentForm.addEventListener('submit', (event) => {
             event.preventDefault(); // Impede o recarregamento da página
 
