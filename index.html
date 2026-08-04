@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combate ao Preconceito</title>
+    <title>Combate ao Preconceito e Promoção da Igualdade</title>
     
     <style>
         * {
@@ -16,60 +16,103 @@
         body {
             background-color: #f4f6f9;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         header {
             background: linear-gradient(135deg, #4f46e5, #7c3aed);
             color: white;
             text-align: center;
-            padding: 2.5rem 1rem;
+            padding: 3rem 1rem;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
 
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 2rem auto;
             padding: 0 1rem;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.8rem;
         }
 
         .card {
             background: white;
-            padding: 1.5rem;
+            padding: 1.8rem;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
+        .hero-banner {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
         .card h2 {
             color: #4f46e5;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eef2ff;
+            padding-bottom: 0.4rem;
         }
 
         .card h3 {
             color: #3730a3;
-            margin-top: 1rem;
-            margin-bottom: 0.4rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
         }
 
         .card ul {
-            margin-left: 1.2rem;
-            margin-bottom: 0.8rem;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
         }
 
         blockquote {
             font-style: italic;
             background-color: #eef2ff;
-            padding: 1rem;
+            padding: 1rem 1.2rem;
             border-left: 4px solid #4f46e5;
             border-radius: 4px;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
         }
 
         button {
@@ -87,50 +130,31 @@
             background-color: #3730a3;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .input-group {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        input[type="text"] {
-            flex: 1;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-
         #message-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.6rem;
+            margin-top: 1rem;
         }
 
         #message-list li {
             background: #f8fafc;
-            padding: 0.75rem;
+            padding: 0.8rem;
             border-radius: 6px;
-            border-left: 3px solid #10b981;
+            border-left: 4px solid #10b981;
             word-break: break-word;
         }
 
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem 1rem;
             color: #666;
             font-size: 0.9rem;
             margin-top: 2rem;
+            background-color: #eaeef4;
         }
 
-        /* Ajustes para telas menores */
         @media (max-width: 600px) {
             .input-group {
                 flex-direction: column;
@@ -141,52 +165,89 @@
 <body>
 
     <header>
-        <h1>Respeito e Igualdade</h1>
-        <p>Juntos contra todo tipo de preconceito e discriminação.</p>
+        <h1>Respeito, Diversidade e Igualdade</h1>
+        <p>Juntos no combate a todo tipo de preconceito e na construção de um mundo mais justo.</p>
     </header>
 
     <main class="container">
+        
+        <img src="http://googleusercontent.com/image_generation_content/0" alt="Mural de Reflexão e Respeito" class="hero-banner">
+
         <section class="card">
-            <h2>O Que Significa Igualdade</h2>
+            <h2>Compreendendo o Preconceito e Seus Impactos</h2>
+            <p>O preconceito é um juízo pré-concebido, formulado sem conhecimento prévio, razão ou reflexão crítica. Frequentemente baseado em estereótipos, ele resulta em atitudes discriminatórias que marginalizam indivíduos e grupos sociais inteiros.</p>
+            <p>A discriminação, por sua vez, é a aplicação prática desse preconceito. Quando permitimos que preconceitos guiem nossas atitudes, criamos barreiras invisíveis — e muitas vezes físicas — que impedem o acesso de pessoas à educação, ao mercado de trabalho, à saúde e ao simples direito de ir e vir com segurança.</p>
+            
+            <blockquote>
+                "A injustiça em qualquer lugar é uma ameaça à justiça em todo lugar." — Martin Luther King Jr.
+            </blockquote>
+        </section>
+
+        <section class="card">
+            <h2>Pilares para uma Sociedade Justa</h2>
+            
+            <h3>1. O Que Significa Igualdade?</h3>
+            <p>Igualdade não significa tornar todos idênticos, mas sim garantir que todos possuam os mesmos direitos e a mesma dignidade humana, independentemente de suas origens ou características físicas e sociais.</p>
             <ul>
-                <li><strong>Direitos iguais:</strong> Todos devem ter as mesmas leis e proteções.</li>
-                <li><strong>Oportunidades:</strong> O acesso a uma vida boa e justa não deve depender de quem você é.</li>
-                <li><strong>Equidade:</strong> Às vezes é preciso tratar as pessoas de formas diferentes para que todas fiquem em pé de igualdade real.</li>
+                <li><strong>Direitos e Proteção Legal:</strong> A legislação deve proteger a todos com a mesma severidade e imparcialidade.</li>
+                <li><strong>Igualdade de Oportunidades:</strong> Garantir que o ponto de partida na vida não seja determinado pela cor da pele, gênero, orientação sexual ou classe social.</li>
+                <li><strong>A Importância da Equidade:</strong> Reconhecer que nem todos partem do mesmo lugar. Para alcançar a verdadeira igualdade, muitas vezes é preciso oferecer suporte diferenciado para quem enfrenta barreiras históricas.</li>
             </ul>
 
-            <h3>O Que Significa Respeito</h3>
+            <h3>2. A Prática Prática do Respeito</h3>
+            <p>O respeito vai além de apenas tolerar a existência do outro. Trata-se de uma postura ativa de reconhecimento e valorização da diversidade.</p>
             <ul>
-                <li><strong>Ouvir o outro:</strong> Prestar atenção no que o outro diz e sente.</li>
-                <li><strong>Valorizar o diferente:</strong> Aceitar que nem todo mundo pensa ou vive igual a você.</li>
-                <li><strong>Zero violência:</strong> Recusar qualquer ato de preconceito ou agressão.</li>
+                <li><strong>Escuta Ativa:</strong> Ouvir com empatia as experiências e dores vividas por grupos minoritários.</li>
+                <li><strong>Desconstrução Diária:</strong> Questionar piadas, expressões e comportamentos que perpetuam piadas ofensivas e preconceituosas.</li>
+                <li><strong>Zero Violência:</strong> Combater agressões verbais, físicas e psicológicas no ambiente de trabalho, escolar e nas redes sociais.</li>
             </ul>
         </section>
 
         <section class="card">
-            <h2>Por que combater o preconceito?</h2>
-            <p>O preconceito e a discriminação ferem a dignidade humana e limitam oportunidades. Promover a empatia, o diálogo e a inclusão é um dever de todos para construir uma sociedade mais justa.</p>
+            <h2>Formas de Preconceito que Devemos Combater</h2>
+            <p>Para combater o preconceito, precisamos primeiro saber identificá-lo em suas diversas manifestações na sociedade:</p>
+            <ul>
+                <li><strong>Racismo:</strong> Discriminação baseada na raça ou etnia. Manifesta-se tanto de forma individual quanto estrutural nas instituições.</li>
+                <li><strong>Machismo e Sexismo:</strong> A crença de que um gênero é superior ao outro, resultando na desigualdade de oportunidades e na violência contra a mulher.</li>
+                <li><strong>LGBTFobia:</strong> Preconceito e aversão direcionados à população LGBTQIA+, privando indivíduos de expressarem sua identidade e afeto de forma livre e segura.</li>
+                <li><strong>Capacitismo:</strong> Discriminação e preconceito social contra pessoas com deficiência, pressupondo que elas são incapazes ou inferiores.</li>
+                <li><strong>Intolerância Religiosa:</strong> Falta de respeito e perseguição às diferentes crenças, práticas espirituais e manifestações de fé.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Como Fazer a Diferença no Dia a Dia?</h2>
+            <p>A mudança estrutural começa nas pequenas atitudes do cotidiano. Aqui estão maneiras simples de ser um agente de transformação:</p>
+            <ul>
+                <li><strong>Consuma cultura diversa:</strong> Leia livros, assista a filmes e acompanhe criadores de conteúdo com vivências diferentes da sua.</li>
+                <li><strong>Não seja um espectador silencioso:</strong> Ao presenciar uma atitude preconceituosa, posicione-se ou busque ajuda de autoridades responsáveis.</li>
+                <li><strong>Eduque as próximas gerações:</strong> Ensine crianças e jovens desde cedo sobre o valor da empatia, do respeito e do acolhimento às diferenças.</li>
+            </ul>
         </section>
 
         <section class="card interact-box">
             <h2>Mural de Ideias e Mensagens</h2>
-            <p style="margin-bottom: 1rem;">Compartilhe sua ideia ou mensagem de respeito para inspirar outras pessoas:</p>
+            <p>O que você faz ou sugere para promover o respeito na sua comunidade ou escola? Deixe sua mensagem no mural abaixo:</p>
             
             <form id="idea-form">
                 <div class="input-group">
-                    <input type="text" id="user-input" placeholder="Escreva sua ideia aqui..." required>
+                    <input type="text" id="user-input" placeholder="Digite sua ideia ou reflexão aqui..." required>
                     <button type="submit">Enviar Ideia</button>
                 </div>
             </form>
 
-            <h3>Mensagens da Comunidade:</h3>
+            <h3>Mensagens Compartilhadas:</h3>
             <ul id="message-list">
-                <li>Respeitar as diferenças é o primeiro passo para um mundo melhor!</li>
+                <li>A educação é a ferramenta mais poderosa para desconstruir preconceitos.</li>
+                <li>Trate todas as pessoas com a dignidade que você gostaria de receber.</li>
+                <li>Respeitar a diversidade é celebrar a própria humanidade!</li>
             </ul>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Respeito e Igualdade. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Respeito e Igualdade. Construindo uma sociedade mais inclusiva para todos.</p>
     </footer>
 
     <script>
@@ -195,19 +256,14 @@
         const messageList = document.getElementById('message-list');
 
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede a página de recarregar
+            event.preventDefault();
 
             const text = input.value.trim();
 
             if (text !== "") {
-                // Cria um novo item na lista
                 const newLi = document.createElement('li');
                 newLi.textContent = text;
-                
-                // Adiciona o novo item no topo da lista
                 messageList.prepend(newLi);
-
-                // Limpa o campo de texto
                 input.value = "";
             }
         });
