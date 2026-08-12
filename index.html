@@ -13,150 +13,157 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* Fundo ULTRA ESCURO (Preto Quase Puro) */
         body {
-            background-color: #080c14;
-            color: #c9d1d9;
-            line-height: 1.6;
+            background-color: #030508;
+            color: #d0d7de;
+            line-height: 1.5;
             padding-bottom: 2rem;
         }
 
+        /* Header Rebaixado e Escuro */
         header {
-            background: linear-gradient(135deg, #09131f, #132238, #00b4d8);
+            background: linear-gradient(180deg, #060911, #020407);
             color: #ffffff;
             text-align: center;
-            padding: 1.8rem 2rem; /* Mais compacto/rebaixado verticalmente */
+            padding: 1.2rem 2rem;
             border-bottom: 2px solid #00f5d4;
-            box-shadow: 0 0 20px rgba(0, 245, 212, 0.15);
+            box-shadow: 0 0 25px rgba(0, 245, 212, 0.2);
         }
 
         header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-shadow: 0 0 12px rgba(0, 245, 212, 0.4);
+            font-size: 2rem;
+            margin-bottom: 0.1rem;
+            font-weight: 800;
+            color: #00f5d4;
+            text-shadow: 0 0 15px rgba(0, 245, 212, 0.6);
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         header p {
-            font-size: 1rem;
-            color: #90e0ef;
+            font-size: 0.95rem;
+            color: #7d8590;
         }
 
-        /* Container expandido na horizontal */
+        /* Container Ultrawide Rebaixado */
         .container-horizontal {
-            max-width: 1400px; /* Layout ultrawide */
-            margin: 1.5rem auto;
-            padding: 0 1.5rem;
+            max-width: 1400px;
+            margin: 1.2rem auto;
+            padding: 0 1.2rem;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
-        /* Hero Banner rebaixado em formato Panorama */
+        /* Hero Banner Rebaixado e Panorâmico */
         .hero-banner-frame {
             width: 100%;
-            max-height: 280px; /* Altura reduzida para efeito rebaixado */
+            height: 200px; /* Super rebaixado na vertical */
             overflow: hidden;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            border: 1px solid #161b22;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
         }
 
         .hero-banner {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Mantém a proporção cortando o excesso */
+            object-fit: cover;
+            filter: brightness(0.7) contrast(1.2);
             display: block;
         }
 
-        /* Grid Horizontal de Cards */
+        /* Grid Horizontal em Caixas Escuras */
         .grid-horizontal {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.2rem;
         }
 
         .card {
-            background: #121721;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            border: 1px solid #21262d;
+            background: #090d16;
+            padding: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            border: 1px solid #161b22;
             border-top: 3px solid #00f5d4;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 245, 212, 0.12);
+            border-color: #00f5d4;
+            box-shadow: 0 0 15px rgba(0, 245, 212, 0.15);
         }
 
         .card.full-width {
-            grid-column: 1 / -1; /* Ocupa toda a largura horizontal */
+            grid-column: 1 / -1;
         }
 
         .card h2 {
             color: #00f5d4;
-            margin-bottom: 0.8rem;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 0.4rem;
-            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+            border-bottom: 1px solid #161b22;
+            padding-bottom: 0.3rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .card h3 {
             color: #00b4d8;
-            margin-top: 1rem;
-            margin-bottom: 0.4rem;
-            font-size: 1.1rem;
+            margin-top: 0.8rem;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
         }
 
         .card p {
-            margin-bottom: 0.8rem;
-            color: #b0bac5;
-            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+            color: #8b949e;
+            font-size: 0.9rem;
         }
 
         .card ul {
             margin-left: 1.2rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
 
         .card li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
             color: #c9d1d9;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
         }
 
         .card a {
             color: #00f5d4;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
         }
 
         .card a:hover {
-            color: #90e0ef;
-            text-shadow: 0 0 8px rgba(0, 245, 212, 0.5);
+            color: #ffffff;
+            text-shadow: 0 0 8px #00f5d4;
             text-decoration: underline;
         }
 
         blockquote {
             font-style: italic;
-            background-color: #0a0e17;
-            padding: 0.8rem 1rem;
+            background-color: #04060a;
+            padding: 0.6rem 0.8rem;
             border-left: 3px solid #00f5d4;
             border-radius: 4px;
-            margin: 0.8rem 0;
+            margin: 0.6rem 0;
             color: #e6edf3;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
-            margin: 1rem 0;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
         }
 
         .input-group {
@@ -166,11 +173,11 @@
 
         input[type="text"] {
             flex: 1;
-            padding: 0.65rem 0.9rem;
-            background-color: #0a0e17;
-            border: 1px solid #30363d;
+            padding: 0.6rem 0.8rem;
+            background-color: #04060a;
+            border: 1px solid #21262d;
             border-radius: 6px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #f0f6fc;
             transition: border-color 0.2s ease;
         }
@@ -178,53 +185,54 @@
         input[type="text"]:focus {
             outline: none;
             border-color: #00f5d4;
-            box-shadow: 0 0 8px rgba(0, 245, 212, 0.3);
+            box-shadow: 0 0 10px rgba(0, 245, 212, 0.4);
         }
 
         button {
-            background: linear-gradient(135deg, #00b4d8, #00f5d4);
-            color: #080c14;
+            background: #00f5d4;
+            color: #030508;
             border: none;
-            padding: 0.65rem 1.2rem;
-            font-size: 0.9rem;
-            font-weight: 700;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.88rem;
+            font-weight: 800;
             border-radius: 6px;
             cursor: pointer;
-            transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-transform: uppercase;
+            transition: background 0.2s ease, box-shadow 0.2s ease;
             white-space: nowrap;
         }
 
         button:hover {
-            opacity: 0.9;
-            box-shadow: 0 0 12px rgba(0, 245, 212, 0.4);
+            background: #ffffff;
+            box-shadow: 0 0 12px #00f5d4;
         }
 
         #message-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
-            margin-top: 0.8rem;
+            gap: 0.4rem;
+            margin-top: 0.6rem;
         }
 
         #message-list li {
-            background: #0a0e17;
-            padding: 0.7rem;
-            border-radius: 6px;
+            background: #04060a;
+            padding: 0.6rem;
+            border-radius: 4px;
             border-left: 3px solid #00b4d8;
             color: #c9d1d9;
             word-break: break-word;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         footer {
             text-align: center;
-            padding: 1.2rem 1rem;
-            color: #8b949e;
-            font-size: 0.85rem;
-            margin-top: 2rem;
-            background-color: #0a0e17;
-            border-top: 1px solid #21262d;
+            padding: 1rem;
+            color: #484f58;
+            font-size: 0.8rem;
+            margin-top: 1.5rem;
+            background-color: #020407;
+            border-top: 1px solid #161b22;
         }
 
         @media (max-width: 768px) {
@@ -254,7 +262,7 @@
             
             <section class="card">
                 <h2>Compreendendo o Preconceito</h2>
-                <p>O preconceito é um juízo pré-concebido, formulado sem conhecimento prévio, razão ou reflexão crítica. Frequentemente baseado em estereótipos, ele resulta em atitudes discriminatórias que marginalizam indivíduos e grupos sociais inteiros.</p>
+                <p>O preconceito é um juízo pré-concebido, formulado sem conhecimento prévio, razão ou reflexão crítica. Frequentemente baseado em estereótipos, resulta em atitudes que marginalizam grupos sociais inteiros.</p>
                 <p>A discriminação é a aplicação prática desse preconceito, criando barreiras que impedem o acesso a direitos básicos como educação, trabalho e segurança.</p>
                 
                 <blockquote>
@@ -263,28 +271,28 @@
             </section>
 
             <section class="card">
-                <h2>Pilares para uma Sociedade Justa</h2>
+                <h2>Pilares para a Igualdade</h2>
                 
                 <h3>1. Igualdade e Equidade</h3>
-                <p>Garantir que todos possuam os mesmos direitos e dignidade, além de oferecer suporte diferenciado para quem enfrenta barreiras históricas.</p>
+                <p>Garantir que todos possuam os mesmos direitos e dignidade, além de oferecer suporte para quem enfrenta barreiras históricas.</p>
 
                 <h3>2. A Prática do Respeito</h3>
                 <ul>
                     <li><strong>Escuta Ativa:</strong> Ouvir com empatia as vivências alheias.</li>
-                    <li><strong>Desconstrução Diária:</strong> Questionar piadas e ofensas.</li>
-                    <li><strong>Zero Violência:</strong> Combater agressões em qualquer ambiente.</li>
+                    <li><strong>Desconstrução:</strong> Questionar piadas e ofensas no dia a dia.</li>
+                    <li><strong>Zero Violência:</strong> Combater agressões virtuais e presenciais.</li>
                 </ul>
             </section>
 
             <section class="card">
                 <h2>Formas de Combate</h2>
-                <p>Identifique as manifestações de discriminação no dia a dia:</p>
+                <p>Identifique as manifestações de discriminação na sociedade:</p>
                 <ul>
                     <li><strong>Racismo:</strong> Discriminação por raça ou etnia.</li>
                     <li><strong>Machismo e Sexismo:</strong> Desigualdade de gênero.</li>
-                    <li><strong>LGBTFobia:</strong> Aversão à população LGBTQIA+.</li>
-                    <li><strong>Capacitismo:</strong> Preconceito contra pessoas com deficiência.</li>
-                    <li><strong>Intolerância Religiosa:</strong> Perseguição a crenças e redes de fé.</li>
+                    <li><strong>LGBTFobia:</strong> Preconceito contra a população LGBTQIA+.</li>
+                    <li><strong>Capacitismo:</strong> Discriminação contra pessoas com deficiência.</li>
+                    <li><strong>Intolerância Religiosa:</strong> Perseguição a crenças.</li>
                 </ul>
             </section>
 
@@ -293,23 +301,23 @@
                 <p>Maneiras simples de ser um agente de transformação:</p>
                 <ul>
                     <li><strong>Consuma cultura diversa:</strong> Busque novos pontos de vista.</li>
-                    <li><strong>Não seja um espectador silencioso:</strong> Posicione-se ao presenciar o bullying.</li>
-                    <li><strong>Eduque com empatia:</strong> Transmita respeito para as próximas gerações.</li>
+                    <li><strong>Não se cale:</strong> Posicione-se ao presenciar o bullying.</li>
+                    <li><strong>Eduque com empatia:</strong> Transmita respeito para o futuro.</li>
                 </ul>
             </section>
 
             <section class="card full-width">
-                <h2>Fontes de Consulta e Sites Oficiais de Apoio</h2>
-                <p>Órgãos e entidades oficiais para consulta e suporte:</p>
+                <h2>Fontes de Consulta e Sites Oficiais</h2>
+                <p>Órgãos e entidades oficiais para consulta e suporte direto:</p>
                 <div class="grid-horizontal">
                     <ul>
                         <li>
                             <strong>Lei do Bullying (Lei nº 13.185/2015):</strong> 
-                            <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13185.htm" target="_blank" rel="noopener noreferrer">Aceder ao Planalto</a>
+                            <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13185.htm" target="_blank" rel="noopener noreferrer">Ver no Planalto</a>
                         </li>
                         <li>
                             <strong>Criminalização (Lei nº 14.811/2024):</strong> 
-                            <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm" target="_blank" rel="noopener noreferrer">Aceder à legislação</a>
+                            <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm" target="_blank" rel="noopener noreferrer">Ver legislação</a>
                         </li>
                         <li>
                             <strong>UNICEF Brasil:</strong> 
@@ -335,7 +343,7 @@
 
             <section class="card full-width">
                 <h2>Mural de Apoio e Mensagens Positivas</h2>
-                <p>Deixe sua sugestão ou mensagem para fortalecer a comunidade:</p>
+                <p>Deixe sua sugestão ou mensagem de apoio:</p>
                 
                 <form id="idea-form">
                     <div class="input-group">
