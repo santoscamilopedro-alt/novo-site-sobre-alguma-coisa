@@ -1,9 +1,20 @@
+Aqui está o código HTML/CSS atualizado com uma paleta de cores voltada para a **conscientização e combate ao bullying**.
+
+Para a causa da prevenção ao bullying e saúde mental, costuma-se utilizar a cor **Laranja** (campanhas globais contra o bullying, como a *Unity Day*) combinada com **Tons de Azul** (símbolo de confiança, segurança e apoio psicológico).
+
+### Principais Alterações no Estilo:
+
+* **Header & Destaques:** Alterados para tons de laranja radiante e azul vibrante, transmitindo acolhimento e energia ativa contra o bullying.
+* **Fundos e Destaques dos Cards:** Tons suaves de azul e laranja para garantir leitura agradável e visual moderno.
+* **Botões e Interatividade:** O botão agora usa um laranja chamativo com hover responsivo.
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combate ao Preconceito e Promoção da Igualdade</title>
+    <title>Combate ao Bullying e Promoção da Igualdade</title>
     
     <style>
         * {
@@ -14,13 +25,14 @@
         }
 
         body {
-            background-color: #f4f6f9;
-            color: #333;
+            background-color: #f2f6fa;
+            color: #2c3e50;
             line-height: 1.7;
         }
 
         header {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            /* Gradiente em Laranja e Azul: cores fortes da conscientização ao bullying */
+            background: linear-gradient(135deg, #ff6b35, #004e89);
             color: white;
             text-align: center;
             padding: 3rem 1rem;
@@ -29,11 +41,12 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .container {
@@ -49,7 +62,8 @@
             background: white;
             padding: 1.8rem;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 78, 137, 0.08);
+            border-top: 4px solid #ff6b35;
         }
 
         .hero-banner {
@@ -61,14 +75,14 @@
         }
 
         .card h2 {
-            color: #4f46e5;
+            color: #004e89;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #eef2ff;
+            border-bottom: 2px solid #eef5fc;
             padding-bottom: 0.4rem;
         }
 
         .card h3 {
-            color: #3730a3;
+            color: #ff6b35;
             margin-top: 1.2rem;
             margin-bottom: 0.5rem;
         }
@@ -88,11 +102,12 @@
 
         blockquote {
             font-style: italic;
-            background-color: #eef2ff;
+            background-color: #fff3ec;
             padding: 1rem 1.2rem;
-            border-left: 4px solid #4f46e5;
+            border-left: 4px solid #ff6b35;
             border-radius: 4px;
             margin: 1rem 0;
+            color: #1a252f;
         }
 
         form {
@@ -110,24 +125,30 @@
         input[type="text"] {
             flex: 1;
             padding: 0.75rem;
-            border: 1px solid #ccc;
+            border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-size: 1rem;
         }
 
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #004e89;
+        }
+
         button {
-            background-color: #4f46e5;
+            background-color: #ff6b35;
             color: white;
             border: none;
             padding: 0.75rem 1.2rem;
             font-size: 0.95rem;
+            font-weight: 600;
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.2s ease-in-out;
         }
 
         button:hover {
-            background-color: #3730a3;
+            background-color: #d9531e;
         }
 
         #message-list {
@@ -139,20 +160,20 @@
         }
 
         #message-list li {
-            background: #f8fafc;
+            background: #eef5fc;
             padding: 0.8rem;
             border-radius: 6px;
-            border-left: 4px solid #10b981;
+            border-left: 4px solid #004e89;
             word-break: break-word;
         }
 
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            color: #666;
+            color: #555;
             font-size: 0.9rem;
             margin-top: 2rem;
-            background-color: #eaeef4;
+            background-color: #e2e8f0;
         }
 
         @media (max-width: 600px) {
@@ -165,8 +186,8 @@
 <body>
 
     <header>
-        <h1>Respeito, Diversidade e Igualdade</h1>
-        <p>Juntos no combate a todo tipo de preconceito e na construção de um mundo mais justo.</p>
+        <h1>Juntos Contra o Bullying</h1>
+        <p>Respeito, empatia e apoio para construir um ambiente seguro para todos.</p>
     </header>
 
     <main class="container">
@@ -194,18 +215,18 @@
                 <li><strong>A Importância da Equidade:</strong> Reconhecer que nem todos partem do mesmo lugar. Para alcançar a verdadeira igualdade, muitas vezes é preciso oferecer suporte diferenciado para quem enfrenta barreiras históricas.</li>
             </ul>
 
-            <h3>2. A Prática Prática do Respeito</h3>
+            <h3>2. A Prática do Respeito</h3>
             <p>O respeito vai além de apenas tolerar a existência do outro. Trata-se de uma postura ativa de reconhecimento e valorização da diversidade.</p>
             <ul>
                 <li><strong>Escuta Ativa:</strong> Ouvir com empatia as experiências e dores vividas por grupos minoritários.</li>
-                <li><strong>Desconstrução Diária:</strong> Questionar piadas, expressões e comportamentos que perpetuam piadas ofensivas e preconceituosas.</li>
+                <li><strong>Desconstrução Diária:</strong> Questionar piadas, expressões e comportamentos que perpetuam preconceitos.</li>
                 <li><strong>Zero Violência:</strong> Combater agressões verbais, físicas e psicológicas no ambiente de trabalho, escolar e nas redes sociais.</li>
             </ul>
         </section>
 
         <section class="card">
-            <h2>Formas de Preconceito que Devemos Combater</h2>
-            <p>Para combater o preconceito, precisamos primeiro saber identificá-lo em suas diversas manifestações na sociedade:</p>
+            <h2>Formas de Preconceito e Bullying que Devemos Combater</h2>
+            <p>Para combater as injustiças, precisamos primeiro saber identificá-las em suas diversas manifestações na sociedade:</p>
             <ul>
                 <li><strong>Racismo:</strong> Discriminação baseada na raça ou etnia. Manifesta-se tanto de forma individual quanto estrutural nas instituições.</li>
                 <li><strong>Machismo e Sexismo:</strong> A crença de que um gênero é superior ao outro, resultando na desigualdade de oportunidades e na violência contra a mulher.</li>
@@ -220,34 +241,34 @@
             <p>A mudança estrutural começa nas pequenas atitudes do cotidiano. Aqui estão maneiras simples de ser um agente de transformação:</p>
             <ul>
                 <li><strong>Consuma cultura diversa:</strong> Leia livros, assista a filmes e acompanhe criadores de conteúdo com vivências diferentes da sua.</li>
-                <li><strong>Não seja um espectador silencioso:</strong> Ao presenciar uma atitude preconceituosa, posicione-se ou busque ajuda de autoridades responsáveis.</li>
+                <li><strong>Não seja um espectador silencioso:</strong> Ao presenciar uma atitude preconceituosa ou bullying, posicione-se ou busque ajuda de autoridades responsáveis.</li>
                 <li><strong>Eduque as próximas gerações:</strong> Ensine crianças e jovens desde cedo sobre o valor da empatia, do respeito e do acolhimento às diferenças.</li>
             </ul>
         </section>
 
         <section class="card interact-box">
-            <h2>Mural de Ideias e Mensagens</h2>
-            <p>O que você faz ou sugere para promover o respeito na sua comunidade ou escola? Deixe sua mensagem no mural abaixo:</p>
+            <h2>Mural de Apoio e Mensagens Positivas</h2>
+            <p>O que você faz ou sugere para combater o bullying na sua escola ou comunidade? Deixe sua mensagem no mural abaixo:</p>
             
             <form id="idea-form">
                 <div class="input-group">
-                    <input type="text" id="user-input" placeholder="Digite sua ideia ou reflexão aqui..." required>
-                    <button type="submit">Enviar Ideia</button>
+                    <input type="text" id="user-input" placeholder="Digite sua mensagem de apoio aqui..." required>
+                    <button type="submit">Enviar Mensagem</button>
                 </div>
             </form>
 
             <h3>Mensagens Compartilhadas:</h3>
             <ul id="message-list">
-                <li>A educação é a ferramenta mais poderosa para desconstruir preconceitos.</li>
-                <li>Trate todas as pessoas com a dignidade que você gostaria de receber.</li>
-                <li>Respeitar a diversidade é celebrar a própria humanidade!</li>
+                <li>A gentileza transforma qualquer ambiente. Seja o apoio de alguém!</li>
+                <li>Trate todas as pessoas com a dignidade e o respeito que você gostaria de receber.</li>
+                <li>Não se cale diante do bullying. Sua voz e atitude fazem a diferença!</li>
             </ul>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Respeito e Igualdade. Construindo uma sociedade mais inclusiva para todos.</p>
+        <p>&copy; 2026 Respeito e Apoio. Diga não ao bullying e sim à inclusão.</p>
     </footer>
 
     <script>
@@ -270,3 +291,5 @@
     </script>
 </body>
 </html>
+
+```
