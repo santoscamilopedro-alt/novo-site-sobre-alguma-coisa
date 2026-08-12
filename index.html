@@ -14,28 +14,33 @@
         }
 
         body {
-            background-color: #f2f6fa;
-            color: #2c3e50;
+            background-color: #0b0f19;
+            color: #c9d1d9;
             line-height: 1.7;
         }
 
         header {
-            /* Gradiente em Laranja e Azul: cores fortes da conscientização ao bullying */
-            background: linear-gradient(135deg, #ff6b35, #004e89);
-            color: white;
+            /* Gradiente escuro e cibernético */
+            background: linear-gradient(135deg, #0d1b2a, #1b263b, #00b4d8);
+            color: #ffffff;
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 3.5rem 1rem;
+            border-bottom: 2px solid #00f5d4;
+            box-shadow: 0 0 20px rgba(0, 245, 212, 0.15);
         }
 
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 0 12px rgba(0, 245, 212, 0.4);
+            letter-spacing: 1px;
         }
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.95;
+            color: #90e0ef;
         }
 
         .container {
@@ -48,11 +53,18 @@
         }
 
         .card {
-            background: white;
+            background: #161b22;
             padding: 1.8rem;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 78, 137, 0.08);
-            border-top: 4px solid #ff6b35;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+            border: 1px solid #30363d;
+            border-top: 4px solid #00f5d4;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 245, 212, 0.1);
         }
 
         .hero-banner {
@@ -61,23 +73,26 @@
             border-radius: 12px;
             margin-bottom: 1.5rem;
             display: block;
+            border: 1px solid #30363d;
         }
 
         .card h2 {
-            color: #004e89;
+            color: #00f5d4;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #eef5fc;
+            border-bottom: 1px solid #30363d;
             padding-bottom: 0.4rem;
+            font-size: 1.5rem;
         }
 
         .card h3 {
-            color: #ff6b35;
+            color: #00b4d8;
             margin-top: 1.2rem;
             margin-bottom: 0.5rem;
         }
 
         .card p {
             margin-bottom: 1rem;
+            color: #b0bac5;
         }
 
         .card ul {
@@ -87,29 +102,31 @@
 
         .card li {
             margin-bottom: 0.5rem;
+            color: #c9d1d9;
         }
 
         /* Estilo para links das fontes */
         .card a {
-            color: #004e89;
+            color: #00f5d4;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
         }
 
         .card a:hover {
-            color: #ff6b35;
+            color: #90e0ef;
+            text-shadow: 0 0 8px rgba(0, 245, 212, 0.5);
             text-decoration: underline;
         }
 
         blockquote {
             font-style: italic;
-            background-color: #fff3ec;
+            background-color: #0d1117;
             padding: 1rem 1.2rem;
-            border-left: 4px solid #ff6b35;
-            border-radius: 4px;
+            border-left: 4px solid #00f5d4;
+            border-radius: 6px;
             margin: 1rem 0;
-            color: #1a252f;
+            color: #e6edf3;
         }
 
         form {
@@ -127,30 +144,35 @@
         input[type="text"] {
             flex: 1;
             padding: 0.75rem;
-            border: 1px solid #cbd5e1;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
             border-radius: 8px;
             font-size: 1rem;
+            color: #f0f6fc;
+            transition: border-color 0.2s ease;
         }
 
         input[type="text"]:focus {
             outline: none;
-            border-color: #004e89;
+            border-color: #00f5d4;
+            box-shadow: 0 0 8px rgba(0, 245, 212, 0.3);
         }
 
         button {
-            background-color: #ff6b35;
-            color: white;
+            background: linear-gradient(135deg, #00b4d8, #00f5d4);
+            color: #0b0f19;
             border: none;
             padding: 0.75rem 1.2rem;
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
         button:hover {
-            background-color: #d9531e;
+            opacity: 0.9;
+            box-shadow: 0 0 12px rgba(0, 245, 212, 0.4);
         }
 
         #message-list {
@@ -162,20 +184,22 @@
         }
 
         #message-list li {
-            background: #eef5fc;
+            background: #0d1117;
             padding: 0.8rem;
             border-radius: 6px;
-            border-left: 4px solid #004e89;
+            border-left: 4px solid #00b4d8;
+            color: #c9d1d9;
             word-break: break-word;
         }
 
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            color: #555;
+            color: #8b949e;
             font-size: 0.9rem;
             margin-top: 2rem;
-            background-color: #e2e8f0;
+            background-color: #0d1117;
+            border-top: 1px solid #30363d;
         }
 
         @media (max-width: 600px) {
